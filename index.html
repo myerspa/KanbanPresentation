@@ -15,6 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/kanban.css">
 		<link rel="stylesheet" href="css/theme/black.css" id="theme">
 
 		<!-- Code syntax highlighting -->
@@ -40,339 +41,256 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
+
+				<!-- Title Slide -->
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>The HTML Presentation Framework</h3>
+					<h1>Kanban</h1>
 					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
+						<small>Peter Myers</small>
 					</p>
 				</section>
 
+				<!-- History -->
 				<section>
-					<h2>Hello There</h2>
+					<h3>A Brief History</h3>
 					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
+						A work in process limited pull system for managing your workflow.
 					</p>
-				</section>
-
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						<br>
-						<a href="#/2">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
-
-				<section>
-					<h2>Slides</h2>
+					<br />
 					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
+						<ul>
+							<li>Translates roughly to "signboard" or "card"</li>
+							<li>Developed by Toyota</li>
+							<li>Eventually adapted to software development</li>
+						</ul>
 					</p>
-				</section>
-
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
-
-				<section>
-					<h2>Touch Optimized</h2>
-					<p>
-						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-					</p>
-				</section>
-
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
-
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
-
-				<section>
-					<section id="fragments">
-						<h2>Fragments</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
-
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's different types of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-					</section>
-				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=slide#/transitions">Slide</a> -
-						<a href="?transition=convex#/transitions">Convex</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						reveal.js comes with a few themes built in: <br>
-						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-					</p>
-				</section>
-
-				<section>
-					<section data-background="#dddddd">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code class="hljs">&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Tiled Backgrounds</h2>
-						<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-							<h2>Video Backgrounds</h2>
-							<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-						</div>
-					</section>
-					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
-						<h2>... and GIFs!</h2>
-					</section>
-				</section>
-
-				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-					</p>
-					<pre><code class="hljs">Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-				</section>
-
-				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						You can override background transitions per-slide.
-					</p>
-					<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
-				</section>
-
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code class="hljs" data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
-
-				<section>
-					<h2>Marvelous List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
-				<section>
-					<h2>Tabular Tables</h2>
-					<table>
-						<thead>
-							<tr>
-								<th>Item</th>
-								<th>Value</th>
-								<th>Quantity</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Apples</td>
-								<td>$1</td>
-								<td>7</td>
-							</tr>
-							<tr>
-								<td>Lemonade</td>
-								<td>$2</td>
-								<td>18</td>
-							</tr>
-							<tr>
-								<td>Bread</td>
-								<td>$3</td>
-								<td>2</td>
-							</tr>
-						</tbody>
-					</table>
-				</section>
-
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
-
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Speaker View</h2>
-					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-					<p>Press the <em>S</em> key to try it out.</p>
 
 					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+						<ul>
+							<li>Developed by Toyota in late 1940s for just-in-time lean manufacturing</li>
+							<li>Kanban named for the physical cards representing work</li>
+						</ul>
+					</aside>
+				</section>
+
+				<!-- The Kanban Board -->
+				<section>
+					<h3>The Kanban Board</h3>
+					<p>"A picture is worth a thousand words."</p>
+					<img src="http://blog.psoda.com/wp-content/uploads/2015/03/Kanban-Board.jpg" style="width: 500px;">
+				</section>
+
+				<!-- The Kanban Board -->
+				<section>
+					<h3>The Kanban Board</h3>
+					<p>Create a picture of the state of your work</p>
+
+					<!-- Board no cards -->
+					<table class="fragment board-board">
+						<thead>
+							<th>Todo</th>
+							<th colspan="2">In Progress</th>
+							<th>Done</th>
+						</thead>
+						<tr>
+							<td>&nbsp;</td><td style="width: 20%;"><p><small>In Progress<small></p></td><td><p><small>Done</small></p></td><td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+						</tr>
+					</table>
+
+					<aside class="notes">
+						<ul>
+							<li>
+								Columns representing stages of your workflow
+							</li>
+							<li>
+								Since Kanban is a pull system, we need a way to indicate that a card is
+								finished in a given stage, so some columns are split
+							</li>
+						</ul>
+					</aside>
+
+				</section>
+
+				<section>
+					<h3>The Kanban Board</h3>
+					<p>Create a picture of the state of your work</p>
+
+					<!-- Board with cards -->
+					<table class="board-board">
+						<thead>
+							<th>Todo</th>
+							<th colspan="2">In Progress<br />(3)</th>
+							<th>Done</th>
+						</thead>
+						<tr>
+							<td>&nbsp;</td><td style="width: 23%;"><p><small>In Progress<small></p></td><td><p><small>Done</small></p></td><td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td><span class="card">Work</span></td><td><span class="card">Work</td><td><span class="card">Work</td><td><span class="card">Work</td>
+						</tr>
+						<tr>
+							<td><span class="card">Work</td><td><span class="card">Work</td><td>&nbsp;</td><td><span class="card">Work</td>
+						</tr>
+						<tr>
+							<td><span class="card">Work</td><td>&nbsp;</td><td>&nbsp;</td><td><span class="card">Work</td>
+						</tr>
+						<tr>
+							<td><span class="card">Work</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+						</tr>
+					</table>
+
+					<aside class="notes">
+						<ul>
+							<li>Cards are individual units of work</li>
+							<li>Swimlanes / rows for categorizing work</li>
+							<li>WIP limits on columns</li>
+						</ul>
+					</aside>
+
+				</section>
+
+				<section>
+					<h3>The Kanban Board</h3>
+					<p>Physical vs. Digital</p>
+
+					<aside class="notes">
+						<ul>
+							<li>
+								Physical board is preferred, best insight to all team members what the work state is
+							</li>
+							<li>
+								Use a digital board if space constrained, remote employees, just think its really cool to have a digital board and everyone wants one, etc.
+							</li>
+							<li>
+								Automated metric reporting
+							</li>
+						</ul>
 					</aside>
 				</section>
 
 				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-					<iframe src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+					<h3>WIP Limits</h3>
+					<p>Do exactly what the name would suggest...limit the amount of work in process</p>
+
+					<aside class="notes">
+						<ul>
+							<li>
+								Reduce context switching
+							</li>
+							<li>
+								When properly balanced, decrease lead time, increase throughput
+							</li>
+							<li>
+								Quickly adapt to changing priorities with minimal waste
+							</li>
+						</ul>
+					</aside>
 				</section>
 
 				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the page background.
-					</p>
-				</section>
-
-				<section data-state="customevent">
-					<h2>State Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
+					<h3>Selecting WIP Limits</h3>
+					<p>TODO - Fill out this slide...</p>
 				</section>
 
 				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-					</p>
-				</section>
-
-				<section>
-					<h2>Much more</h2>
+					<h3>Using It</h3>
+					<p>Remember, it's a pull system</p>
 					<ul>
-						<li>Right-to-left support</li>
-						<li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
+						<li>Cards are pulled into the next stage</li>
+						<li>Columns should be prioritized top to bottom</li>
+					</ul>
+
+					<aside class="notes">
+						Prioritizing columns is ongoing, and can be double checked at a daily standup. This removes the need to have unnecessary
+						prioritization meetings.
+					</aside>
+
+				</section>
+
+				<section>
+					<h3>Using It</h3>
+					<p>Set rules about when a card can be considered "done" in a particular stage</p>
+
+					<aside class="notes">
+						Helps drive quality through every step of the process by ensuring things aren't skipped over, like code reviews.
+					</aside>
+
+				</section>
+
+				<section>
+					<h3>Managing External Dependencies</h3>
+					Set them aside and wait.
+
+					<aside class="notes">
+						If something in progress is blocked on an external dependency, you can just flag it as an external dependency.
+						It doesn't count towards your WIP limits, just revisit each day at your standup and see if it's ready to be worked on again.
+					</aside>
+
+				</section>
+
+				<section>
+					<h3>Releasing</h3>
+					Kanban is about continuously delivering value to customers rather than dropping a large feature set.
+
+					<aside class="notes">
+						Select a release cadence, or release when you have "enough" ready to go.
+						Don't wait until you have a whole new version with tons of new features to go out.
+						Roll out those features incrementally as they become ready, gather feedback.
+					</aside>
+				</section>
+
+				<section>
+					<h3>Measuring Success</h3>
+					<ul>
+						<li>Leadtime</li>
+						<li>Throughput</li>
+						<li>New bugs</li>
+					</ul>
+
+					<aside class="notes">
+						Your process and your WIP limits can and should change over time to try to drive improved metrics.
+					</aside>
+				</section>
+
+				<section>
+					<h3>TLDR;</h3>
+					Kanban can:
+					<ul>
+						<li>
+							Reduce # of planning meetings (especially if you're coming from Scrum)
+						</li>
+						<li>
+							Visualize your workflow and identify bottlenecks
+						</li>
+						<li>
+							Respond faster to changing priorties
+						</li>
+						<li>
+							Continuously deliver value
+						</li>
 					</ul>
 				</section>
 
-				<section style="text-align: left;">
-					<h1>THE END</h1>
-					<p>
-						- <a href="http://slides.com">Try the online editor</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-					</p>
+				<section>
+					<h3>Questions</h3>
 				</section>
 
 			</div>

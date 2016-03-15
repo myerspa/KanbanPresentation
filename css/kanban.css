@@ -1,0 +1,36 @@
+.board-board {
+  width: 100%;
+}
+
+.board-board th, .board-board td {
+  text-align: center !important;
+}
+
+.board-board th {
+  border-right: 1px solid;
+}
+
+.board-board th:last-child {
+  border-right: 0 none;
+}
+
+.board-board td {
+  border-bottom: 0 none !important;
+  border-right: 1px solid;
+}
+
+.board-board td:last-child {
+  border-right: 0 none !important;
+}
+
+span.card {
+  display: inline-block;
+  width: 80%;
+  height: 50px;
+  border-radius: 10px;
+  border: 3px solid;
+  background-color: #E6DD93;
+  font-size: .8em;
+  line-height: 50px;
+  color: #000;
+}
